@@ -32,7 +32,11 @@ class TradeController {
       res.status(500).json({ message: 'Failed to fetch trade' });
     }
   };
-  
+
+  static async replaceTrade (req, res) {
+    res.status(405).send('Method Not Allowed'); 
+  };
+
   static async updateTrade (req, res) {
     res.status(405).send('Method Not Allowed'); 
   };
