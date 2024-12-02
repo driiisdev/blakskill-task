@@ -6,10 +6,7 @@ var middleware = require('../middleware');
 
 router.get('/:id', tasksController.getById);
 
-router.use(middleware);
-
-router
-    .post('/', tasksController.create)
-    .get('/', tasksController.getAll);
+router.post('/', middleware, tasksController.create);
+router.get('/', middleware, tasksController.getAll);
 
 module.exports = router;

@@ -1,4 +1,6 @@
 const Trade = require('../models/trades');
+
+
 class TradeController {
   static async createTrade (req, res) {
     try {
